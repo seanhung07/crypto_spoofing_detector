@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/crypto_spoofing_detector/static/css/main.722eafe8.css",
-    "main.js": "/crypto_spoofing_detector/static/js/main.692b6091.js",
+    "main.js": "/crypto_spoofing_detector/static/js/main.86ab2f5e.js",
     "static/js/453.ef7c0c41.chunk.js": "/crypto_spoofing_detector/static/js/453.ef7c0c41.chunk.js",
     "index.html": "/crypto_spoofing_detector/index.html",
     "main.722eafe8.css.map": "/crypto_spoofing_detector/static/css/main.722eafe8.css.map",
-    "main.692b6091.js.map": "/crypto_spoofing_detector/static/js/main.692b6091.js.map",
+    "main.86ab2f5e.js.map": "/crypto_spoofing_detector/static/js/main.86ab2f5e.js.map",
     "453.ef7c0c41.chunk.js.map": "/crypto_spoofing_detector/static/js/453.ef7c0c41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.722eafe8.css",
-    "static/js/main.692b6091.js"
+    "static/js/main.86ab2f5e.js"
   ]
 }
