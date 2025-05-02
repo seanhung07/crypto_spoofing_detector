@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Crypto Market Monitor
+A comprehensive platform for monitoring cryptocurrency markets and detecting potential market manipulation activities in real-time using data from Binance Futures API.
+# Market Manipulation Detection Patterns
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Classic Spoofing
 
-## Available Scripts
+**Description:**  
+The placement of large orders with the intent to cancel before execution. These orders create a false impression of market depth/direction.
 
-In the project directory, you can run:
+**Detection:**  
+Large orders that disappear within a short time window.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. Order Layering
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Description:**  
+Multiple orders at different price levels, typically in one direction, creating an artificial appearance of market depth to influence other traders.
 
-### `npm test`
+**Detection:**  
+Multiple large orders in succession at incrementally worse prices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 3. Iceberg Orders
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Description:**  
+Large orders that are disguised by showing only a small portion at a time. Not inherently manipulative, but can hide large interests.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Detection:**  
+Repeated order additions at the same price level after executions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 4. Momentum Ignition
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Description:**  
+Placing orders to trigger other participants into accelerating or creating price movements. Often used to trigger stop losses or algorithmic trading reactions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Detection:**  
+Large orders with significant potential price impact.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Screenshot 2025-05-02 at 6 49 45 PM](https://github.com/user-attachments/assets/7d465f94-4bfa-4674-b3a9-04dd00dd78fc)
+![Screenshot 2025-05-02 at 6 50 38 PM](https://github.com/user-attachments/assets/74911f92-01bc-4403-b06e-25b2dd4d69fe)
+![Screenshot 2025-05-02 at 6 50 56 PM](https://github.com/user-attachments/assets/a05c50e8-e34a-486c-b0b6-25424a541f56)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
