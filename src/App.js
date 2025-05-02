@@ -1907,8 +1907,8 @@ const SpoofDetector = ({
                     </Badge>
                   </td>
                   <td>${typeof event.price === 'number' ? event.price.toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2
+                    minimumFractionDigits: getDynamicPrecision(event.price),
+                    maximumFractionDigits: getDynamicPrecision(event.price)
                   }) : event.price}</td>
                   <td>{event.quantity}</td>
                   <td>
